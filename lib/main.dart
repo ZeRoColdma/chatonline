@@ -24,7 +24,7 @@ _ensureLoggedIn() async {
   if(user == null) {
     user = await googleSignin.signInSilently();
   }
-  if(user == null) async{
+  if(user == null) async{ 
     user = await googleSignin.signIn();
   }
   if(await auth.currentUser() == null){
